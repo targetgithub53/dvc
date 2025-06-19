@@ -5,8 +5,11 @@ import pandas as pd
 data = {
     'name': ['Alice', 'Bob', 'Charlie'],
     'marks': [85, 90, 95]
+    
 }
 df = pd.DataFrame(data)
+df_new_row={'name':'ram','marks':98}
+df.loc[len(df.index)]=df_new_row
 
 # 2. Create a folder if it doesn't exist
 os.makedirs("data/processed", exist_ok=True)
